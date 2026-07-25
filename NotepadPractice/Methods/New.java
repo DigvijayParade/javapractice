@@ -1,23 +1,22 @@
+import java.util.*;
 public class New{
 
 	public static void main(String[]args){
 
-		New obj = new New();
-		obj.add(20.00021,100000l);
-		System.out.println(sub(100,200000));
+		
+System.out.println(args[0]);
+System.out.println(Arrays.toString(args));
+
+String g = args[0] + args[1];
+
+int a = Integer.parseInt(args[0]);
+int b = Integer.parseInt(args[1]);
+int c= a + b;
+System.out.println(c);
+
+System.out.println(g);
+
 
 	}
 	
-	public void add(double x,long y){
-
-		System.out.println(x+y);
-	
 	}
-	
-	public static int sub(int a,int b){
-
-		return a+b;
-
-	}
-
-}
