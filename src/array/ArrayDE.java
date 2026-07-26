@@ -29,5 +29,8 @@ public class ArrayDE{
 		numbers.add(sc.nextInt());
 		System.out.println(numbers);
 		sc.close();
+		
+		Double price = Double.valueOf(45.25);
+		double v = price;
 	}
 }
