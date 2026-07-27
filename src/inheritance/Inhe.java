@@ -1,6 +1,6 @@
 package inheritance;
 
-
+// multiple inheritance
 interface one{
 	
 	default void meth0() {
