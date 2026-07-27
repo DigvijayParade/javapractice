@@ -43,7 +43,6 @@ public class Bank {
 		customers[3] = new Bank("DD",89000.0);
 		customers[4] = new Bank("Ganu",50.0);
 		
-//		System.out.println(details(cunstomers));
 		
 		int i = 0;
 		for (Bank detail : customers) {
