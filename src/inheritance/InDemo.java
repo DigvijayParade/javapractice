@@ -16,7 +16,7 @@ class Main{
 	}
 	
 }
-public class InDemo {
+public class InDemo extends Demo {
 	
 	public static void main(String[] args) {
 			
@@ -24,8 +24,17 @@ public class InDemo {
 		}
 	public static void here(Main meth) {
 		
-		meth.what();
+		Demo obj = new Demo();
+		obj.how();
+	}
 		
+		void how() {
+			
+			System.out.println("Method overriding");
+		}
+		
+		
+	
 	}
-	}
+
 
