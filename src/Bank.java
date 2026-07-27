@@ -48,7 +48,7 @@ public class Bank {
 		for (Bank detail : customers) {
 			
 			details(detail); // Reusing your helper method!
-            System.out.println("-----------------");
+           
 		}
 	}
 	public static void details(Bank data) {
