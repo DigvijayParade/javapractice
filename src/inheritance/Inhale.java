@@ -12,6 +12,9 @@ public class Inhale extends Air{
 
 	public static void main(String[] args) {
 		
+		goes();
+		Inhale is = new Inhale();
+		is.gas();
 	}
 	public static void goes() {
 		
