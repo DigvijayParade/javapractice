@@ -6,7 +6,7 @@ class Air{
 		
 		System.out.println("normal method of the Air class");
 	}
-	public void gas() {}
+	 void gas() {}
 }
 public class Inhale extends Air{
 
@@ -23,7 +23,7 @@ public class Inhale extends Air{
 	}
 	
 	@Override
-	public void gas() {
+	void gas() {
 		
 		System.out.println("dont inhale gas");
 	}
