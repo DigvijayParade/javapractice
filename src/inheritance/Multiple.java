@@ -5,7 +5,7 @@ interface Something{
 	void some();//abstract method
 }
 interface What{
-	
+	int a = 0;
 	public default void yes (){
 		
 		System.out.println("this is a default method in the interface ,we can override it");
@@ -20,6 +20,7 @@ public class Multiple implements Something,What{
 		
 		Multiple obj =  new Multiple();
 		
+		System.out.println(a);
 		obj. some();
 		obj. yes();
 		obj. how();

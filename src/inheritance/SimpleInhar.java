@@ -4,6 +4,11 @@ import java.util.*;
 
 class Parent{
 	
+	String name;
+	public Parent(String name) {
+		
+		this.name = name;
+	}
 	void parent() {
 		
 		System.out.println("we will just use it as it is");
@@ -16,15 +21,25 @@ class Parent{
 }
 public class SimpleInhar extends Parent {
 	
+	int id ;
+	public SimpleInhar (int id,String name){
+		
+		super(name);
+		this.id = id;
+		
+		
+	}
 	public static void main(String[] args) {
 		
-		SimpleInhar obj = new SimpleInhar();
+		SimpleInhar obj = new SimpleInhar(29,"nanu");
 		obj.parent();
 		obj.parent2();
 	}
 	@Override
 	void parent2() {
 		
+		System.out.println(id);
+		System.out.println(name);
 		Scanner sc = new Scanner(System.in);
 		System.out.println("overrided method");
 		System.out.println("just enter opr name & some numbers");
