@@ -54,7 +54,7 @@ public class Payment extends NetBank{
 			}
 	public static void main(String[]args) {
 		
-		Payment obj = new Payment();
+//		Payment obj = new Payment();
 	
 	}
 	
