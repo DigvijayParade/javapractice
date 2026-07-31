@@ -24,6 +24,6 @@ public class Allpayments {
 	}
 	public void upi(int amount) {
 		
-		System.out.println(username+" "+"paid"+" "+amount+" "+"through the creditcard");
+		System.out.println(username+" "+"paid"+" "+amount+" "+"through the upi");
 	}
 }
