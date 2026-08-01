@@ -2,6 +2,7 @@ package inheritance;
 
 import java.util.*;
 
+//
 class Vehicle{
 	
 	String brand;
