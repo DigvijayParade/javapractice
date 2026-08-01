@@ -12,7 +12,7 @@ public class ReverseStringAndArray {
 	public static void reve(String name) {
 		
 		String reversed = "";  
-		
+		 
 		for (int i = name.length() - 1; i >= 0; i--) {
 			reversed = reversed + name.charAt(i);
 		}
