@@ -9,7 +9,7 @@ interface Driveable {
 
 
 class Vehicl implements Driveable {
-    String brand;
+    String brand; 
 
     public Vehicl(String brand) {
         this.brand = brand;
@@ -48,12 +48,13 @@ class SportsCar extends Vehicl {
     }
 }
 
+
 public class Maina {
     public static void main(String[] args) {
 
         Driveable myTruck = new CyberTruc("Tesla CyberTruck");
         Driveable myFerrari = new SportsCar("Ferrari F8");
-
+//
         ArrayList<Driveable> garage = new ArrayList<>();
         garage.add(myTruck);
         garage.add(myFerrari);
