@@ -1,5 +1,7 @@
 package Interface;
 
+import java.util.ArrayList;
+
 interface Hero{
 	
 	void attack() ;
@@ -42,7 +44,7 @@ class Mage extends BaseHero{
 	@Override 
 	public void useSpecialAbility() {
 		
-		if (mana <= 30) {
+		if (mana >= 30) {
 			
 			mana -= 30;
 			System.out.println(name+" "+"casts fireball Remainig mana : "+" "+mana);
@@ -63,7 +65,38 @@ class Archer extends BaseHero{
 	}
 	
 	@Override
-	public void useSpecialAbility() {}
+	public void useSpecialAbility() {
+		
+		if(ammo > 0) {
+			
+			ammo -= 1;
+			System.out.println(name +" "+"fires a Snipe Shot! Remaining Ammo: "+" "+ammo);
+		}else {
+			
+			System.out.println(name +" "+"tries to Snipe, but is OUT OF AMMO!\"");
+		}
+	}
 }
 
-public class BattleArena{}
+public class BattleArena{
+	
+	public static void main(String[] args) {
+		
+		ArrayList <Hero> party = new ArrayList <>();
+		
+		Hero theMage = new Mage("Dr.Strange",100);
+		Hero theArcher = new Archer("Dr.Doom",1000);
+		
+		party.add(theArcher);
+		party.add(theMage);
+		
+		for(Hero h : party) {
+			
+			h.attack();
+			h.useSpecialAbility();
+            h.useSpecialAbility();
+			
+		}
+	}
+		
+}
