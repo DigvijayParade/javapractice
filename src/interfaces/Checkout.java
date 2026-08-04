@@ -39,6 +39,12 @@ class CryptoWallet implements PaymentMethod{
 		
 	}
 	
+	@Override
+	public void printReceipt(double amount) {
+		
+		System.out.println("ransaction hash is : 0x9A4FUHI");
+	}
+	
 	
 }
 
@@ -52,16 +58,18 @@ public class Checkout {
 		PaymentMethod obj1 = new PayPal();
 		PaymentMethod obj2 = new CryptoWallet();
 		
+		obj2.printReceipt(455.22);
+		
 		gyat.add(obj);
 		gyat.add(obj1);
 		gyat.add(obj2);
 		
-		gyat.get(1);
+		
 		
 		for(PaymentMethod p : gyat) {
 			
 			p.processPayment(400.00);
-			
+			p.printReceipt(150);
 		}
 	}
 }
