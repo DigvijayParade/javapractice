@@ -1,13 +1,16 @@
 package abstractclasses;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Driveable{
 
-	String drivename ;
+	String drivername ;
 	String licenseplate ;
 	
-	public Vehicle (String drivename , String licenseplate) {
+	public Vehicle (String drivername , String licenseplate) {
 		
-		this. drivename ;
-		this. 
+		this. drivername = drivername ;
+		this. licenseplate = licenseplate ;
+		
+		System.out.println("Drive name :"+" "+drivername);
+		System.out.println("Licence Plate : "+" "+licenseplate);
 	}
 }
