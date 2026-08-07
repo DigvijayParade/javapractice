@@ -18,8 +18,6 @@ abstract class GameCharacter implements Combatant{
 		this.name = name ;
 		this. health = health ;
 		
-		System.out.println("Character Name : "+name);
-		System.out.println(name+"'s"+" "+health);
 	}
 }
 
@@ -32,9 +30,35 @@ abstract class Hero extends GameCharacter{
 		super(name , health);
 		this.stamina = stamina ;
 		
-		System.out.println("Hero Name : "+name);
+	}
+	
+}
+
+class Warrior extends Hero{
+	
+	public Warrior(String name ,int health,int stamina) {
+		
+		super(name , health , stamina);
+		System.out.println("Hero Warriors Name : "+name);
 		System.out.println(name+"'s"+" "+health);
 		System.out.println(name+"'s"+" "+stamina);
+	}
+	
+	@Override 
+	public void attack(String target) {
 		
+		System.out.println("Hero attacks "+" "+target);
+	}
+	
+	@Override
+	public void defend() {
+		
+		System.out.println(name+" "+"Defends from the attack");
+	}
+	
+	@Override
+	public void usespecialability() {
+		
+		System.out.println("Hero"+" "+name+" "+"uses Special Ability!!");
 	}
 }
