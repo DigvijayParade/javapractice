@@ -40,8 +40,8 @@ class Warrior extends Hero{
 		
 		super(name , health , stamina);
 		System.out.println("Hero Warriors Name : "+name);
-		System.out.println(name+"'s"+" "+health);
-		System.out.println(name+"'s"+" "+stamina);
+		System.out.println(name+"'s"+" "+"Health : "+health);
+		System.out.println(name+"'s"+" "+"Stamina : "+stamina);
 	}
 	
 	@Override 
