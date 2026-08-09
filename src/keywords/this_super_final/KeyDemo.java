@@ -65,6 +65,8 @@ public class KeyDemo extends Lock{
 	public Lock time(){
 		
 		System.out.println("Override the this metjhod cause it aint final but the greet method is final can overrde that");
+	
 		return this ;
+		
 	}
 }
