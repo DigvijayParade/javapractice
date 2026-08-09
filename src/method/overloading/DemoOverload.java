@@ -49,7 +49,7 @@ public class DemoOverload{
 		
 		obj.Student("MCA","Java, Python, DSA");
 		
-		DemoOverload obj1 = new DemoOverload(sc.nextDouble(),sc.hasNextBoolean());
+		DemoOverload obj1 = new DemoOverload(sc.nextDouble(),sc.nextBoolean());
 		
 		obj1.Student();
 	}
