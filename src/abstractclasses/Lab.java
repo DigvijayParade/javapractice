@@ -91,11 +91,19 @@ public class Lab{
 		}
 		ArrayList <Girls> listGirls = new ArrayList<> ();
 		
-		listGirls.add(new Girls("Vijsy","Gay",66));
-		listGirls.add(new Girls("DD","Non- binary",69));
+		listGirls.add(new Girls("Swara","Feamale",7));
+		listGirls.add(new Girls("Mayuri","Female",18));
+		listGirls.add(new Girls("Pratiksha","Female",45));
+		
+		
+		for (Girls g : listGirls) {
 			
+			g.sit();
+			g.stand();
+			g.go();
+		}	
 			
-			//
+		
 	
 }
 	
