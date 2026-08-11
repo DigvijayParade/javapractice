@@ -57,14 +57,19 @@ class Warrior extends Hero{
 		System.out.println("this nigga "+name+" "+"uses special move");
 	}
 	
-	public static void main(String[] args) {
+}
+
+class Mage extends Hero{
+	
+	public Mage(String name ,int health ) {
 		
-		Warrior W1 = new Warrior("Doom",100);
-		W1.speak();
-		W1.takeDamage(7);
-		W1.usespecialMove() ;
-		
+		super(name ,health );
 	}
+	
+	@Override
+	
+	
+	
 	
 }
 
