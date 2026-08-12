@@ -40,5 +40,12 @@ public class UsingThis {
 		System.out.println("method calling using this ");
 	}
 	
+	public static void main(String[] args) {
+		
+		UsingThis obj = new UsingThis("Nanu",38);
+		
+		obj.m1().m2().m3();
+	}
+	
 	
 }
