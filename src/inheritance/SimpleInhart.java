@@ -2,10 +2,10 @@ package inheritance;
 
 import java.util.*;
 
-class Parent{
+class Parat{
 	
 	String name;
-	public Parent(String name) {
+	public Parat(String name) {
 		
 		this.name = name;
 	}
@@ -19,10 +19,10 @@ class Parent{
 		System.out.println("We will override this one");
 	}
 }
-public class SimpleInhar extends Parent {
+public class SimpleInhart extends Parat {
 	
 	int id ;
-	public SimpleInhar (int id,String name){
+	public SimpleInhart (int id,String name){
 		
 		super(name);
 		this.id = id;
@@ -31,7 +31,7 @@ public class SimpleInhar extends Parent {
 	}
 	public static void main(String[] args) {
 		
-		SimpleInhar obj = new SimpleInhar(29,"nanu");
+		SimpleInhart obj = new SimpleInhart(29,"nanu");
 		obj.parent();
 		obj.parent2();
 	}
