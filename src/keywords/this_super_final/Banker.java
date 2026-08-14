@@ -29,7 +29,7 @@ package keywords.this_super_final;
 		System.out.println("Identity Verified by Bank Policy");
 	} 
 	
-	BankAcc applyFee(double fee) {
+ public  BankAcc applyFee(double fee) {
 		
 		if(balance >= fee) {
 			
