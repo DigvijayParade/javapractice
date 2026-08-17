@@ -7,6 +7,7 @@ public class Chil1 {
 	
 	Parent p = new Parent();
 	p.m1();
+	p.m2();
 
 	}
 	}

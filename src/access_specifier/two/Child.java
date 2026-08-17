@@ -8,6 +8,7 @@ public class Child extends Parent{
 		
 	Child p = new Child();
 	p.m1();
+	p.m2();
 	
 	}
 }

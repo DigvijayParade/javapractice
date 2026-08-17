@@ -6,4 +6,9 @@ public class Parent {
 		
 		System.out.println("Hello from the parent");
 	}
+	
+	protected void m2() {
+		
+		System.out.println("m2 is a protected method");
+	}
 }
