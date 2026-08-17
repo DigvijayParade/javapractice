@@ -14,7 +14,7 @@ class CombatEngine{
 		
 	}
 	
-	void attack(String mName) {
+	CombatEngine attack(String mName) {
 		
 		if (isAttacked) {
 			
@@ -26,10 +26,11 @@ class CombatEngine{
 			
 			System.out.println(this.monsterName+" "+"Escaped !!");
 		}
+		return this ;
 		
 	}
 	
-	void attack(int damage) {
+	CombatEngine attack(int damage) {
 		
 		System.out.println("Special attack used ");
 		
@@ -37,6 +38,8 @@ class CombatEngine{
 		
 		System.out.println();
 		System.out.println("Monster Was Attacked now Health of it is "+this.Health);
+		
+		return this ;
 		
 	}
 }
@@ -48,8 +51,7 @@ public class CompileTime{
 		
 		CombatEngine Nanu = new CombatEngine("Thanos",1000,true);
 		
-		Nanu.attack("Thanos");
-		Nanu.attack(100);
+		Nanu.attack("Thanos").attack(100);
 		
 	}
 	
