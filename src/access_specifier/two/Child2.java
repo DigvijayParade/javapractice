@@ -15,6 +15,15 @@ public class Child2 extends Parent2{
 	
 	Child2 obj1 = new Child2();
 	obj1.meth1();//can be accessed through the child object
+	
+	System.out.println(obj1.id = 9);
+	
+	obj1.xyz();
+	}
+	
+	public void xyz() {
+		
+		System.out.println(id);
 	}
 	
 }

@@ -8,6 +8,6 @@ public class Child2 {
 	Parent2 pt = new Parent2();
 	pt.meth1();
 	pt.meth2();
-	
+	System.out.println(pt.id );
 	}
 }
