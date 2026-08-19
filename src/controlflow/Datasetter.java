@@ -1,5 +1,7 @@
 package controlflow;
 
+import encapsulation.Datafetch;
+
 public class Datasetter {
 
 	private String name ;
@@ -17,7 +19,29 @@ public class Datasetter {
 		obj.salary = 45000.00 ;
 		obj.isLoyal = true ;
 		
+		Datafetch obj1 = new Datafetch();
+		
+		obj1.getData(obj);
 		
 		
 	}
+	
+	public String getName() {
+		
+		return this.name ;
+	}
+public int getID() {
+		
+		return this.id ;
+	}
+
+public double getSalary() {
+	
+	return this.salary ;
+}
+
+public boolean getState(){
+	
+	return this.isLoyal ;
+}
 }
