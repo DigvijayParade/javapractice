@@ -1,7 +1,5 @@
 package pojo_classes;
 
-import java.util.*;
-
 public class SetStd {
 
 	private String name ;
