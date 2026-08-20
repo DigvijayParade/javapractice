@@ -2,24 +2,24 @@ package pojo_classes;
 
 public class CarData {
 
-	public void getData(Pojo1 p) {
-		
-		p.setName("Lambo");
-		p.setID(85);
-		p.setPrice(8000000000.45);
-		p.setcarEmail("some.gmail.com");
-		
-		System.out.println(p.getName());
-		System.out.println(p.getCarEmail());
-		System.out.println(p.getprice());
-		System.out.println(p.gerID());
-		
-	}
-	
-	public static void main(String[] args) {
-		
-		Pojo1 obj = new Pojo1();
-		
-		obj.sendData();
-	}
+    public static void main(String[] args) {
+        Pojo1 obj = new Pojo1();
+
+        // Populate object
+        obj.setName("Lambo");
+        obj.setID(85);
+        obj.setPrice(8000000000.45);
+        obj.setcarEmail("some.gmail.com");
+
+        // Process/Display data
+        CarData printer = new CarData();
+        printer.displayData(obj);
+    }
+
+    public void displayData(Pojo1 p) {
+        System.out.println("Name: " + p.getName());
+        System.out.println("Email: " + p.getCarEmail());
+        System.out.println("Price: " + p.getName());
+        System.out.println("ID: " + p.gerID());
+    }
 }
