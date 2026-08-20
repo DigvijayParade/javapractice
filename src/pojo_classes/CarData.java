@@ -11,9 +11,10 @@ public class CarData {
         obj.setPrice(8000000000.45);
         obj.setcarEmail("some.gmail.com");
 
+        System.out.println(obj);
         // Process/Display data
-        CarData printer = new CarData();
-        printer.displayData(obj);
+//        CarData printer = new CarData();
+//        printer.displayData(obj);
     }
 
     public void displayData(Pojo1 p) {
@@ -22,4 +23,6 @@ public class CarData {
         System.out.println("Price: " + p.getName());
         System.out.println("ID: " + p.gerID());
     }
+    
+   
 }

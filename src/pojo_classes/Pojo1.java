@@ -51,7 +51,13 @@ public class Pojo1 {
 	public void sendData() {
 		
 		CarData c1 = new CarData();
-		c1.getData(this);
+		c1.displayData(this);
+	}
+	
+	@Override
+	public String toString() {
+		
+		return "Name : "+name+" id :"+id+" Price : "+price ;
 	}
 }
 
