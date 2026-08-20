@@ -6,29 +6,30 @@ public class PojoDemo {
 	private int id ;
 	private String address ;
 	
-	public PojoDemo(String name,int id ) {
+	public void setName(String name) {
+        if (name != null) {
+            this.name = name;
+        }
+    }
+	public void setID(int id) {
+        if (id > 0) {
+            this.id = id;
+        }
+    }
+	public void setAddress(String address) {
+        if (address != null) {
+            this.address = address;
+        }
+    }
+	
+	public String getName() {
 		
-		if(!(name == null)) {
-			
-		this.name = name ;
-		
-		}
-		
-		if(id > 0 && ){}
-		this.id = id ;
-
+		return this.name ;
 	}
 	
-	public void setAddress(String address) {
+	public int getID() {
 		
-		if(!(address == null)) {
-			
-			this.address = address ;
-		}
-		else {
-			
-			System.out.println("the address should be filled !!");
-		}
+		return this.id ;
 	}
 	
 	public String getAddress() {
