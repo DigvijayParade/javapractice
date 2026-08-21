@@ -24,11 +24,11 @@ public class BookInfo {
 	
 	//now if i want increase the price of the book java the return
 	
-	booksinfo[3].setName("The Return od Java !!");
+	booksinfo[3].setName("The Return of Java !!");
 	booksinfo[3].setPrice(10000.00);
 	
 	System.out.println(booksinfo[3]);
 	//one more time
-	System.out.println("Update the Price and name of the 4th book :"+booksinfo[3].getPrice()+booksinfo[3].getName());
+	System.out.println("Updated 4th book -> Name: " + booksinfo[3].getName() + " | Price: $" + booksinfo[3].getPrice());
 	}
 }
