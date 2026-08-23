@@ -1,5 +1,7 @@
 package pojo_classes;
 
+import java.util.Objects;
+
 public class Library {
 
 	private String bookName;
@@ -30,4 +32,24 @@ public class Library {
 		
 		return "Book Name : "+ bookName + " Book ID : "+bookId+" Book Price : "+price ;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(bookId, bookName, price);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Library other = (Library) obj;
+		return bookId == other.bookId && Objects.equals(bookName, other.bookName)
+				&& Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price);
+	}
+	
+	
 }
