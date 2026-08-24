@@ -11,9 +11,9 @@ class Child extends Parent {
 	
 	public static void main(String[] args) {
 		
-		Parent p = new Child("Nanu");
+		Parent p = new Child("Nanu");//upcating
 		
-		Child c = (Child)p ;
+		Child c = (Child)p ;//downcasting
 		
 		System.out.println(c);
 	}
