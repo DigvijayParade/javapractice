@@ -1,4 +1,4 @@
-package Typecasting;
+package typecasting;
 
 public class CastingDemo {
 
