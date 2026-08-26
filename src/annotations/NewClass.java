@@ -9,6 +9,6 @@ public class NewClass {
 	int result =  obj.meth(20,30);
 	System.out.println(result);
 	
-	DiffMeths obj1 = (String h) -> {System.out.println();};
+//	DiffMeths obj1 = (String h) -> {System.out.println();};
 	}
 }
