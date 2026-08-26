@@ -1,12 +1,20 @@
 package annotations;
 
 public class Imtired {
-
-	FInterface obj = (int a, int b) -> {System.out.println(a + b);};
-	
+		
 	public static void main(String[] args) {
 		
+
+		FInterface obj = (int a, int b) -> {System.out.println(a + b);};
+		FInterface obj1 = (int a, int b) -> {System.out.println(a * b);};
 		Imtired demo = new Imtired();
-		demo.obj.m1(20, 39);
+		demo.dLuffy(obj);
+		demo.dLuffy(obj1);
+		
+	}
+	
+	void dLuffy(FInterface object) {
+		
+		object.m1(10, 40);
 	}
 }
