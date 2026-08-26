@@ -4,18 +4,25 @@ public class EmpOperations {
 
 	public static void main(String[] args) {
 		
-		EmpOp e1 = (Employee emp) -> {return "Details of";};
-
-		Employee []empList = new Employee[3];
-		empList[0] = new Employee("Nanu",101);
-		empList[1] = new Employee("Gannu",102);
-		empList[2] = new Employee("Sonu",103);
-		
-		//////////
-		for (Employee e : empList) {
+		EmpOp e1 = (Employee emp) -> {
 			
-			System.out.println(e);
-		}
+			System.out.println(emp.getEmpName());
+			System.out.println(emp.getEmpId());
+			
+			return "Employee Details Added ...";
+		};
+		
+		EmpOp delete = (Employee emp) -> {
+			
+			emp.setEmpName(null);
+			emp.setEmpId(0);
+			
+			return "Deleted Employee Data ........";
+		};
+
+		Employee obj = new Employee("Sonu",78);
+		System.out.println(e1.apply(obj));
+		System.out.println(delete.apply(obj));
 	}
 	
 }
