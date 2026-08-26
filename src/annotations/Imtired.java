@@ -11,6 +11,7 @@ public class Imtired {
 		demo.dLuffy(obj);
 		demo.dLuffy(obj1);
 		
+		
 	}
 	
 	void dLuffy(FInterface object) {
