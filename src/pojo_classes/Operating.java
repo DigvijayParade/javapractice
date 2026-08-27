@@ -20,8 +20,10 @@ public class Operating {
 	};
 	
 	public static void main(String[] args) {
-		
-		Library e = new Library();
-		String res = addBook.operation(e);
+	
+		Operating obj = new Operating();
+		Library l = new Library();
+		String some = obj.removeBook.operation(l);
+		System.out.println(some);
 	}
 }
