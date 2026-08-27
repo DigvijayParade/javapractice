@@ -25,5 +25,6 @@ public class Operating {
 		Library l = new Library();
 		String some = obj.removeBook.operation(l);
 		System.out.println(some);
+		
 	}
 }

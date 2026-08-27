@@ -1,6 +1,6 @@
 package exception_handling;
 
-import java.rmi.AlreadyBoundException;
+//import java.rmi.AlreadyBoundException;
 
 public class Handle {
 	
@@ -17,6 +17,16 @@ public class Handle {
 		catch(Exception e) {
 			
 			System.out.println("Something wrnog");
+		}
+		
+		String name = "Sonu Monu";
+		
+		try {
+		System.out.println(name.charAt(5));
+		}
+		catch(Exception e){
+			
+			System.out.println("Well what can i say");
 		}
 		
 	}
