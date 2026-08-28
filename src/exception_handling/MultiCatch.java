@@ -1,7 +1,5 @@
 package exception_handling;
 
-import java.nio.channels.AlreadyBoundException;
-
 public class MultiCatch {
 
 	public static void main(String[] args) {
