@@ -20,7 +20,7 @@ public class DemoOf {
 			System.out.println("Reason of the Exception : "+reason);
 		}
 		
-		System.out.println("This was a compile time Exception mean unchecked");
+		System.out.println("This was a Runtime time Exception mean unchecked");
 		
 			
 			try {
@@ -30,7 +30,7 @@ public class DemoOf {
 				System.out.println(e.getMessage());
 			}
 			
-			System.out.println("THos was a Runtime exception Also called the checked");
+			System.out.println("THos was a CompileTime exception Also called the checked");
 
 	}
 }
