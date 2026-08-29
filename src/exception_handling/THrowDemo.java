@@ -27,7 +27,8 @@ public class THrowDemo {
 			// TODO Auto-generated catch block
 			System.out.println(e);
 		}
-		m2();
+		m2();//this method contains an runtime exception it isnt neccesaary or reccomended to use the throws for the runtime exception
+		
 	}
 
 }
