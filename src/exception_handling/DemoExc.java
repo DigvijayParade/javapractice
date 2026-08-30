@@ -10,7 +10,7 @@ public class DemoExc {
             FileInputStream obj = new FileInputStream("C://info.txt");
         } catch (FileNotFoundException e) {
             System.out.println("Log: File open failed in m1(). Re-throwing exception...");
-            throw e; // Explicitly re-throwing the caught exception
+            throw e; 
         }
     }
 
