@@ -14,14 +14,18 @@ public class CollectionDemo {
 	}
 	public static void main(String[] args) {
 		
+		ArrayList  names = new ArrayList();
 		ArrayList <CollectionDemo> list = new ArrayList <>();
 		
 		list.add(new CollectionDemo("WristBsnd",101));
 		list.add(new CollectionDemo("Car",102));
 		System.out.println(list.get(1));
 		
+		names.add("Hwlo");
+		names.add(101);
 		for (CollectionDemo o : list) {
 			
+			System.out.println(names);
 			o.printInfo();
 		}
 	}
