@@ -2,16 +2,23 @@ package exception_handling;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FilterInputStream;
 
 public class DemoExc {
 
-	static void m1() throws FileNotFoundException {
-		
-		FileInputStream obj = new FileInputStream("C://info.txt");
-	}
-	public static void main(String[] args) {
-		
-		
-	}
+    static void m1() throws FileNotFoundException {
+        try {
+            FileInputStream obj = new FileInputStream("C://info.txt");
+        } catch (FileNotFoundException e) {
+            System.out.println("Log: File open failed in m1(). Re-throwing exception...");
+            throw e; // Explicitly re-throwing the caught exception
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            m1();
+        } catch (FileNotFoundException e) {
+            System.out.println("Caught in main: " + e.getMessage());
+        }
+    }
 }
