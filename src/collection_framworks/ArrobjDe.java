@@ -44,11 +44,17 @@ public class ArrobjDe {
 			
 		}
 		
+		
 		System.out.println("----------New List ----------");
-for(ArrobjDe o : info) {
+		
+			for(ArrobjDe o : info) {
 			
 			System.out.println(o);
 		}
+			
+			System.out.println(info.size());
+
+		
 	}
 	
 	@Override
