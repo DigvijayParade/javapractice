@@ -53,7 +53,7 @@ public class ArrobjDe {
 		}
 			
 			System.out.println(info.size());
-
+info.remove(info.get(0));
 		
 	}
 	
