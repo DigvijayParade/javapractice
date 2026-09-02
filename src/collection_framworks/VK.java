@@ -32,10 +32,10 @@ public class VK {
 	}
 		
 		
-//	@Override
-//	public String toString() {
-//		return "VK [name=" + name + ", id=" + id + "]";
-//	}
+	@Override
+	public String toString() {
+		return "VK [name=" + name + ", id=" + id + "]";
+	}
 	
 	
 }
