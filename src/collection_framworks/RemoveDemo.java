@@ -33,5 +33,9 @@ public class RemoveDemo {
 		System.out.println("//////////////////////");
 		System.out.println(arr1.removeAll(link1));
 		System.out.println(arr1);
+		
+		System.out.println("/////////");
+		
+		System.out.println(arr1.contains("Mia"));
 	}
 }
