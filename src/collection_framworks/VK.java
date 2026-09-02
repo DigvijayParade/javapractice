@@ -1,5 +1,6 @@
 package collection_framworks;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class VK {
@@ -15,11 +16,12 @@ public class VK {
 	}
 	public static void main(String[] args) {
 		
-		LinkedList <VK> link = new LinkedList<>();
+		ArrayList <VK> link = new ArrayList<>();
 		
 		link.add(new VK("nanu",12));
+		link.add(new VK("Gannu",154));
 		
-		System.out.println(link.get(0));
+		
 		
 		try {
 		link.remove(1);
