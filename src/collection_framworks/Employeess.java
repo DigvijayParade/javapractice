@@ -1,7 +1,6 @@
 package collection_framworks;
 
 import java.util.ArrayList ;
-
 import java.util.List;
 
 public class Employeess {
@@ -51,6 +50,9 @@ public class Employeess {
 		Employeess emp = new Employeess();
 		
 		emp.gethighestSalary(empList);
+		emp.getLowestsalary(empList);
+		emp.getCount(empList);
+		emp.getEmpCountByDept(empList, "IT");
 	
 	}
 	
@@ -61,17 +63,89 @@ public class Employeess {
 			return ;
 		}
 		
-		Employeess highestpaidSalary = list.get(0) ;
+		Employeess higherSalary = list.get(0);
 		
 		for (Employeess e : list) {
 			
-			if(highestpaidSalary.salary > e.salary) {
+			if (e.salary > higherSalary.salary) {
 				
-				highestpaidSalary = e ;
+				 higherSalary = e ;
 			}
 		}
-		System.out.println(highestpaidSalary.getSalary());
+		
+		System.out.println("Highest salary ....");
+		System.out.println(higherSalary);
 	}
+	
+	void getLowestsalary(ArrayList <Employeess> list) {
+		
+		if (list == null || list.isEmpty()) {
+			
+			return ;
+		}
+		
+		Employeess lowestsalary = list.get(0);
+		
+		for (Employeess e : list) {
+			
+			if(e.salary < lowestsalary.salary) {
+				
+				lowestsalary = e ;
+			}
+		}
+			
+			System.out.println("Lowest salary ....");
+			System.out.println(lowestsalary);
+		
+	}
+	
+	void getCount (ArrayList <Employeess> list){
+		
+		int maleCount = 0;
+		int femaleCount = 0;
+		for(Employeess e : list) {
+			
+			if(e.getGender().equalsIgnoreCase("Female") ){
+				
+				femaleCount ++;
+			}
+			else if(e.getGender().equalsIgnoreCase("Male")) {
+				
+				maleCount ++;
+			}
+		}
+		
+		System.out.println("Total Male Employee : "+maleCount);
+		System.out.println("Total Female Employee : "+femaleCount);
+	}
+	
+	void getEmpCountByDept(ArrayList<Employeess> list, String deptName) {
+	    if (list == null || list.isEmpty()) return;
+
+	    int count = 0;
+	    for (Employeess e : list) {
+	        if (e.getDepname().equalsIgnoreCase(deptName)) {
+	            count++;
+	        }
+	    }
+	    System.out.println("Total employees in " + deptName + ": " + count);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	public String getName() {
 		return name;
