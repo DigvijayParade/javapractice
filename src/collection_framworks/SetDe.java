@@ -2,6 +2,7 @@ package collection_framworks;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -31,6 +32,11 @@ public class SetDe {
 		
 		System.out.println(nav);
 		
-		System.out.println();
+		System.out.println("Converting to the LinkedHashSet : ");
+		
+		Set <String> namvay = new LinkedHashSet <>(names);
+		
+		System.out.println("Size of The LinkedHashSet : "+namvay.size());
+		System.out.println(namvay);
 	}
 }
