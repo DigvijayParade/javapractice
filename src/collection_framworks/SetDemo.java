@@ -16,9 +16,12 @@ public class SetDemo {
 		
 		System.out.println(setOfId.contains(101));
 		
-//		
-//		LinkedList <Integer> setOfId = new LinkedList<>(List.of(101,101,102,103,104));
-//		
-//		System.out.println(setOfId);
+		System.out.println(setOfId.getClass());
+		
+		LinkedList <Integer> setOfId2 = new LinkedList<>(List.of(8,85,9,42,30));
+		
+		System.out.println(setOfId.addAll(setOfId2));
+		
+		System.out.println(setOfId);
 	}
 }
