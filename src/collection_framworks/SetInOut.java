@@ -1,7 +1,9 @@
 package collection_framworks;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class SetInOut {
     public static void main(String[] args) {
@@ -20,5 +22,19 @@ public class SetInOut {
         System.out.println(stdData.remove(s3));
         
         System.out.println(stdData);
+        
+        Set<StudentData> set = new TreeSet<>(Comparator.comparingInt(StudentData::getId));
+        set.addAll(Set.of(new StudentData("Gannu", 105), new StudentData("mannu", 106)));
+        
+        try {
+        for (StudentData o : set) {
+        	
+        		System.out.println(o);
+        }
+        }
+        catch(Exception e) {
+        	
+        	System.out.println(e.getMessage());
+        }
     }
 }
