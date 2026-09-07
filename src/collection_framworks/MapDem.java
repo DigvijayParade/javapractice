@@ -1,19 +1,18 @@
-package collection_framworks;
+package collection_framworks ;
 
-import java.util.HashMap;
+import java.util.*;
 
-public class MapDem {
-
+public class MapDem{
+	
 	public static void main(String[] args) {
 		
-		HashMap <Integer,String> list = new HashMap <>();
+		Map <String,ArrayList> classRoom = new HashMap<>();
 		
-		list.put(1, "nanu");
-		list.put(2, "nanu");
-		list.put(3, "nanu");
-		list.put(4, "nanu");
-//		list.put(1, "nanu");
+		classRoom.put("Class10th", new ArrayList(List.of("Nanu","Sonu","Gannu","Monu")));
+		classRoom.put("Class12th", new ArrayList(List.of("Sonty","Bobey","Balley")));
 		
-		System.out.println(list.getOrDefault(6, "Tenud"));
+		System.out.println(classRoom.get("Class10th"));
+		System.out.println(classRoom.get("Class12th"));
+		
 	}
 }
