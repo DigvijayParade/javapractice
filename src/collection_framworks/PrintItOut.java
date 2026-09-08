@@ -15,5 +15,8 @@ public class PrintItOut {
 //			System.out.println(k.getKey());
 			System.out.println(k.getKey()+"="+k.getValue());
 		}
+		
+		some.remove(10);
+		System.out.println(some);
 	}
 }
