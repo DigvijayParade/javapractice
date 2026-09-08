@@ -14,5 +14,11 @@ public class MapDem{
 		System.out.println(classRoom.get("Class10th"));
 		System.out.println(classRoom.get("Class12th"));
 		
+		System.out.println("2 years have passed now 10th student r in the 12th...........");
+		
+		classRoom.get("Class12th").clear();
+		System.out.println(classRoom.get("Class12th").add(List.of("Nanu","Sonu","Gannu","Monu")));
+		
+		System.out.println("New class of 12th : "+classRoom.get("Class12th"));
 	}
 }
