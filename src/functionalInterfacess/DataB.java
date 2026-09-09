@@ -50,7 +50,7 @@ public class DataB {
 	public boolean equals(Object o) {
 		
 		if(this == o) return true;
-		if(this.getClass() == o.getClass()) return false ;
+		if(this.getClass() != o.getClass()) return false ;
 		
 		DataB other = (DataB) o; 
 		
