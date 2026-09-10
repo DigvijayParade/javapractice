@@ -18,9 +18,23 @@ public class ProductVerify {
 		Supplier <ProductInfo> givePd = () -> new ProductInfo("Nokia",106,100000000.00,false);
 		
 		System.out.println(getname.apply(p3));
-		System.out.println(isExpired.test(p1));
+		boolean expireTestonp1 = isExpired.test(p1);
+		System.out.println(expireTestonp1);
 		takePd.accept(p5);
 		System.out.println(givePd.get());
 		
+		ProductVerify obj = new ProductVerify();
+		obj.m1(expireTestonp1);
+	}
+	
+	void m1(boolean yesOrno ) {
+		
+		if (yesOrno) {
+			
+			System.out.println("Product Expired ? : "+ yesOrno);
+		}else {
+			
+			System.out.println("Product isnt Expired.....");
+		}
 	}
 }
