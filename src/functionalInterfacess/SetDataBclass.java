@@ -1,5 +1,7 @@
 package functionalInterfacess;
 
+import java.util.Random;
+import java.util.UUID;
 import java.util.function.*;
 
 public class SetDataBclass {
@@ -14,10 +16,12 @@ public class SetDataBclass {
 		Predicate <DataB> checkName = obj -> obj.getName().equals("nanu");
 		Consumer <DataB> storeObj = obj ->{ System.out.println(  obj.getName());};
 		Supplier <DataB> giveObj = () -> new DataB("Gannu",104);
+		Supplier<String> giveStr = () -> UUID.randomUUID().toString();
 		
 		System.out.println(getId.apply(s3));
 		System.out.println(checkName.test(s3));
 							storeObj.accept(s3);
 		System.out.println(giveObj.get());
+		System.out.println(giveStr.get());
 	}
 }
