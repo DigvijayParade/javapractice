@@ -20,6 +20,9 @@ public class StreamDemo {
 		Predicate <Employee> m1 = (e) -> e.getEmpSalary() >= 50000.00;
 		dataStream.filter(m1)
         .forEach(e -> System.out.println(e.getName() + " : " + e.getEmpSalary()));
+		
+		Predicate <Employee> m2 = (e) -> e.getEmpAge() > 10 ;
+		dataStream.filter(m2).forEach(e -> System.out.println(e.getName()+"= "+e.getEmpAge()));
 	}
 	
 	public ArrayList <Employee> getAllEmp(Scanner sc){
