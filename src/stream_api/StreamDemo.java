@@ -3,6 +3,8 @@ package stream_api;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class StreamDemo {
 
@@ -13,6 +15,11 @@ public class StreamDemo {
 		
 		ArrayList<Employee> empData = obj.getAllEmp(sc);
 		
+		Stream <Employee> dataStream =  empData.stream();
+		
+		Predicate <Employee> m1 = (e) -> e.getEmpSalary() >= 50000.00;
+		dataStream.filter(m1)
+        .forEach(e -> System.out.println(e.getName() + " : " + e.getEmpSalary()));
 	}
 	
 	public ArrayList <Employee> getAllEmp(Scanner sc){
