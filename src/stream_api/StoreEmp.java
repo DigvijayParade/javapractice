@@ -1,32 +1,25 @@
 package stream_api;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class StreamDemo {
+public class StoreEmp {
 
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
-		StreamDemo obj = new StreamDemo();
-		
-		ArrayList<Employee> empData = obj.getAllEmp(sc);
 		
 	}
 	
-	public ArrayList <Employee> getAllEmp(Scanner sc){
+	public ArrayList<Employee> getEmp(Scanner sc){
 		
-		ArrayList <Employee> empInfo = new ArrayList <>();
+		ArrayList <Employee> empInfo = new ArrayList<>();
+		Scanner ac = new Scanner(System.in);
+		System.out.println("Enter How many Employee : ");
+		int empNum = sc.nextInt();
 		
-		System.out.println("How many emp ?");
-		
-		int numEmp = sc.nextInt();
-		sc.nextLine();
-		
-		for (int i = 1 ; i <= numEmp; i++) {
+		for (int i = 1 ; i <= empNum ; i++) {
 			
-			System.out.println("Enter Details of Employee "+i+" "+" : ");
+			System.out.println("Enter details for Employee : "+ i);
 			
 			System.out.println("Enter Name : ");
 			String empName = sc.nextLine();
@@ -41,8 +34,11 @@ public class StreamDemo {
 			double empSalary = Double.parseDouble(sc.nextLine());
 			
 			empInfo.add(new Employee(empName,empId,empAge,empSalary));
+			
 		}
-
+		
+		
 		return empInfo ;
+		
 	}
 }
