@@ -9,9 +9,7 @@ public class FilterPd {
 		FilterPd obj = new FilterPd();
 		ArrayList <ProductData> pdList = obj.getPddata();
 		
-		pdList.stream()
-	      .filter(e -> e.getPrice() > 50000.00)
-	      .forEach(t -> System.out.println(t.getPdName()));
+		pdList.stream().filter(e -> e.getPrice() > 40000.00).forEach(e -> System.out.println( e.getPdName()));
 	}
 	public ArrayList<ProductData> getPddata(){
 		
