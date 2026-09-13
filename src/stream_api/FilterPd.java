@@ -10,6 +10,7 @@ public class FilterPd {
 		ArrayList <ProductData> pdList = obj.getPddata();
 		
 		pdList.stream().filter(e -> e.getPrice() > 40000.00).forEach(e -> System.out.println( e.getPdName()));
+	
 	}
 	public ArrayList<ProductData> getPddata(){
 		
