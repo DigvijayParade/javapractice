@@ -7,4 +7,6 @@ public interface Data {
 	int id = 0 ;
 	
 	void setData(String name, int id);
+	
+	default void purpose() {System.out.println("this is the Fucntional Interface");};
 }
