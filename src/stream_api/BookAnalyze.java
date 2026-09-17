@@ -3,6 +3,7 @@ package stream_api;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class BookAnalyze {
 
@@ -11,16 +12,17 @@ public class BookAnalyze {
 		BookAnalyze obj = new BookAnalyze();
 		ArrayList<BookData> bookList = obj.getBookData();
 
-		Predicate<BookData> cheapBooks = b -> b.getPrice() < 500.00;
-
-		bookList.stream()
-				.filter(cheapBooks)
-				.map(b -> b.getTitle())
-				.forEach(title -> System.out.println(title));
-
-		bookList.stream()
-				.filter(b -> b.getPages() > 400)
-				.forEach(b -> System.out.println(b.getTitle() + " - " + b.getPages() + " pages"));
+		List<String> authors = bookList.stream()
+		        .filter(e -> e.getPrice() > 400)
+		        .map(e -> e.getAuthor())
+		        .collect(Collectors.toList());
+		
+		int i = 0;
+		for(String a : authors) {
+			
+			i++ ;
+			System.out.println("Author"+ i +":"+a);
+		}
 	}
 
 	public ArrayList<BookData> getBookData() {
