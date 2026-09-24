@@ -14,12 +14,12 @@ public class Employee {
 		this.gender = gender ;
 	}
 	
-	public static boolean validateEmpDetails(Employee e) {
+	public static void validateEmpDetails(Employee e) {
 		
 		if(e.getId() != 0 && e.getName() != null) 
+			System.out.println( "Invalid EMployee");
 			
-			return true ;
-		return false ;
+		
 	}
 	
 	public String getName() {

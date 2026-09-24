@@ -8,10 +8,10 @@ public class Mr {
 		
 		Valid vd = Employee :: validateEmpDetails ;
 		
-		System.out.println(vd.validate(emp));
+	vd.validate(emp);
 		
 		Valid vd2 = e -> e.getGender().equalsIgnoreCase("Male");
 		
-		System.out.println(vd2.validate(emp));
+		vd2.validate(emp);
 	}
 }
