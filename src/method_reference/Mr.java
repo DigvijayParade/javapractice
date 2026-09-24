@@ -6,7 +6,7 @@ public class Mr {
 		
 		Employee emp = new Employee("Nanu",101,"Male");
 		
-		Valid vd = Employee :: validateEmpDetails ;
+		Valid vd = emp :: validateEmpDetails ;
 		
 	vd.validate(emp);
 		

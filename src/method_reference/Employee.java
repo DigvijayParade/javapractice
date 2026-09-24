@@ -14,7 +14,7 @@ public class Employee {
 		this.gender = gender ;
 	}
 	
-	public static void validateEmpDetails(Employee e) {
+	public void validateEmpDetails(Employee e) {
 		
 		if(e.getId() != 0 && e.getName() != null) 
 			System.out.println( "Invalid EMployee");
