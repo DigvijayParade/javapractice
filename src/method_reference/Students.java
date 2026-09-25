@@ -55,6 +55,12 @@ public class Students {
 		return name;
 	}
 	
-	
+	public static void validateStd(Students s) {
+		
+		if(s.getName() != null && s.getId() < 100 && s.getDepName().equalsIgnoreCase("MCA")) {
+			
+			System.out.println("Real Student..........");
+		}
+	}
 	
 }
