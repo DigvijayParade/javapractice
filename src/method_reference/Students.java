@@ -62,5 +62,9 @@ public class Students {
 			System.out.println("Real Student..........");
 		}
 	}
+public String meth() {
+		
+		return this.getName();
+	}
 	
 }
