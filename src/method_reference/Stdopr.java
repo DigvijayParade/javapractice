@@ -1,7 +1,7 @@
 package method_reference;
 
 @FunctionalInterface
-public interface Stdopr {
+public interface Stdopr<T,U ,W,R> {
 
-	public String opr(Students std);
+	public void opr(Students std,String s,int i,String sa);
 }
