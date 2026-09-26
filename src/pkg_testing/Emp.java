@@ -13,6 +13,7 @@ public class Emp {
 		emp1.empId(101);
 		System.out.println(emp1.empLang("Java"));
 		
+		//
 	}
 	
 	public static void companyName(String compname) {
