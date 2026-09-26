@@ -11,6 +11,8 @@ public class DemoExc {
         } catch (FileNotFoundException e) {
             System.out.println("Log: File open failed in m1(). Re-throwing exception...");
             throw e; 
+            
+            
         }
     }
 
