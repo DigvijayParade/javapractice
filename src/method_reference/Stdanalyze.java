@@ -10,6 +10,6 @@ public class Stdanalyze {
 		Students s1 = new Students("Nanu",11,"MCA");
 		
 //		m1.opr(s1);
-		System.out.println(m2.opr(s1));
+		System.out.println(m2.opr(s1));//
 	}
 }
