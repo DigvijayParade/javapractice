@@ -14,6 +14,7 @@ public class Company {
 	
 	public void getData(Employee emp) {
 		
+		
 		System.out.println(emp.getname());
 		System.out.println(emp.getSalary());
 	}
