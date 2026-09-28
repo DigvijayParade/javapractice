@@ -4,6 +4,6 @@ public class TestingNewIde {
 
 	public static void main(String[] args) {
 		
-		System.out.println("New Ide :)");
+		System.out.println("New Ide :)");//hello :)
 	}
 }
