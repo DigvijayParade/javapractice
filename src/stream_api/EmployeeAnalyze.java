@@ -12,7 +12,6 @@ public class EmployeeAnalyze {
 		EmployeeAnalyze obj = new EmployeeAnalyze();
 		ArrayList<EmployeeData> empList = obj.getEmpData();
 
-		// Concept 1: Sorting, Limiting, and Collecting into a new List
 		List<String> topPerformers = empList.stream()
 				.sorted(Comparator.comparingInt(EmployeeData::getScore).reversed())
 				.limit(3)
@@ -21,7 +20,6 @@ public class EmployeeAnalyze {
 
 		System.out.println("Top 3 Performers: " + topPerformers);
 
-		// Concept 2: Extracting unique values with distinct()
 		empList.stream()
 				.map(e -> e.getDepartment())
 				.distinct()
