@@ -39,9 +39,9 @@ public class DataBase {
 		
 		return "Name : " + this.name + ", ID : " + this.id + ", Is Male : " + this.isMale;
 	}
-	@Override
-	public int hashCode() {
-		
-		
-	}
+//	@Override
+//	public int hashCode() {
+//		
+//		
+//	}
 }
