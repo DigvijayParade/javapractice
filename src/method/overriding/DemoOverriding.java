@@ -48,15 +48,15 @@ class Male extends All{
 	}
 }
 
-class Female extends All{
-	
-	public Female(String name , int age ) {
-		
-		final String gender = "Female";
-		
-		super(name , age);
-	}
-}
+//class Female extends All{
+//	
+////	public Female(String name , int age ) {
+////		
+////		final String gender = "Female";
+////		
+////		super(name , age);
+//	}
+//}
 
 public class DemoOverriding{
 	
