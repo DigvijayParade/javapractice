@@ -8,7 +8,7 @@ public class StdCollect {
 		
 //		ArrayList <Students> stdlist = new ArrayList<>();
 //		LinkedList<Students> stdlist = new LinkedList<>();
-		HashSet <Students> stdlist = new HashSet<>();
+		TreeSet <Students> stdlist = new TreeSet<>(Comparator.comparing(Students::getId));
 //		
 		stdlist.add(new Students("Aarav", 101, "Male", 10));
 		stdlist.add(new Students("Ananya", 102, "Female", 12));
@@ -21,7 +21,7 @@ public class StdCollect {
 		stdlist.add(new Students("Rahul", 109, "Male", 11));
 		stdlist.add(new Students("Pooja", 110, "Female", 10));
 
-		stdlist.remove(3);
+		stdlist.removeIf(s -> s.getId() == 103);
 		
 		for(Students s : stdlist) {
 			
