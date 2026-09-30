@@ -18,6 +18,8 @@ public class Students {
 		this.gender = gender;
 		this.standard = standard;
 	}
+	
+
 	public static void main(String[] args) {
 		
 		Students s1 = new Students("Nanu",101,"Male",12);

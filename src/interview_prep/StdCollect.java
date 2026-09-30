@@ -9,8 +9,7 @@ public class StdCollect {
 //		ArrayList <Students> stdlist = new ArrayList<>();
 //		LinkedList<Students> stdlist = new LinkedList<>();
 		TreeSet <Students> stdlist = new TreeSet<>(Comparator.comparing(Students::getId));
-//		
-		stdlist.add(new Students("Aarav", 101, "Male", 10));
+//		-		stdlist.add(new Students("Aarav", 101, "Male", 10));
 		stdlist.add(new Students("Ananya", 102, "Female", 12));
 		stdlist.add(new Students("Rohan", 103, "Male", 11));
 		stdlist.add(new Students("Priya", 104, "Female", 10));
