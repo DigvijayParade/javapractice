@@ -68,8 +68,8 @@ public class DemoOverriding{
 		
 		System.out.println("//////////////////");
 		
-		All f1 = new Female("Swara",23);
-		f1.eats();
-		f1.sleeps();
+//		All f1 = new Female("Swara",23);
+//		f1.eats();
+//		f1.sleeps();
 	}
 }
