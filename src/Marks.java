@@ -4,7 +4,7 @@ public class Marks {
 		
 		Marks st1 = new Marks();
 		Marks st2 = new Marks();
-		st1.result("Ruturaj", 34);
+		st1.result("Swara", 34);
 		st2.result("Digvijay", 99);
 	}
 	
