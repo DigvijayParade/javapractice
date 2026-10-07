@@ -1,5 +1,6 @@
 package constructor;
 
+
 import java.util.*;
 
 public class Constchain {
@@ -19,11 +20,7 @@ public class Constchain {
 		science = sc.nextInt();
 		System.out.println(name+" "+"got total marks : "+" "+(maths+science));
 	}
-	public Constchain(String name){
-		
-		this.name = name;
-
-	}
+	
 	
 	public static void main(String[]args) {
 	Constchain s1 = new Constchain(0,0);
