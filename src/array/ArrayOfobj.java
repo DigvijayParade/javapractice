@@ -10,6 +10,8 @@ public class ArrayOfobj {
 	public ArrayOfobj(String name,
 	int id,
 	double price) {
+
+
 		
 		this.id =  id;
 		this.price = price;
