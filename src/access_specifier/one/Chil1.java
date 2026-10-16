@@ -1,4 +1,3 @@
-
 package access_specifier.one;
 
 public class Chil1 {

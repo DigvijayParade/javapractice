@@ -3,6 +3,6 @@ package lambdas;
 @FunctionalInterface
 public interface FiInter {
 	
-	void multi(int x,int y);
+	int multi(int x,int y);
 	
 }

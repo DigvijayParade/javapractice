@@ -2,7 +2,6 @@ package array;
 
 public class Arraayt {
 	
-	
 	public static void main(String[]args) {
 
 		ok();
