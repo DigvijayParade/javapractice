@@ -4,8 +4,13 @@ public class TheClass {
 
 	public static void main(String[] args) {
 		
-		FiInter into = (x,y) ->{( x*x) + (y*y) };
+		FiInter into = (x,y) ->{int sqrX = x*x;
 		
-		System.out.println(into.multi(10, 20));
+								int sqrY = y*y;	int total = sqrX + sqrY ;
+								System.out.println(total) ;
+								
+		};
+		
+		into.multi(10, 20);
 	}
 }
