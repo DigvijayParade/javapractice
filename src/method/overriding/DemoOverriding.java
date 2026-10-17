@@ -26,6 +26,8 @@ abstract class All implements Human{
 		
 		System.out.println(name+" "+"eats the food !!");
 		System.out.println(name+"s"+" "+"age is"+" "+age);
+		
+		
 	}
 	
 	@Override 
