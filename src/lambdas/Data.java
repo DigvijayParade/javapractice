@@ -16,6 +16,8 @@ public class Data {
 		this.salary = salary ;
 	}
 	
+	
+	
 	public String getName() {
 		return name;
 	}
