@@ -10,6 +10,8 @@ public class Employee {
 	public void sendData() {
 		
 		Employee emp = new Employee();
+		
+		
 		emp.name = "Nanu" ;
 		emp.salary = 45000.00 ;
 		
