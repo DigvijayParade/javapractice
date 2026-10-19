@@ -45,10 +45,17 @@ public class Data {
 	
 	@Override
 	public boolean equals(Object o) {
-		
-		if(o == this)
-		return true ;
-		if(o.) {}
+	   
+	    if (this == o) return true;
+	    
+	    // 2. Null check and type check
+	    if (o == null || getClass() != o.getClass()) return false;
+
+	    Data data = (Data) o;
+	
+	    return id == data.id &&
+	           Double.compare(data.salary, salary) == 0 &&
+	           Objects.equals(name, data.name);
 	}
 	
 	@Override
