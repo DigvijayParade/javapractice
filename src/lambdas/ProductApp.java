@@ -56,9 +56,13 @@ public class ProductApp {
 		System.out.println("Promo Item Created: " + promoProduct.getName());
 
 		pdList.add(give.get());
-		}
-	
 		
+		
+		System.out.println("//////////////////////////////////////////////////");
+		System.out.println("//////////////////////////////////////////////////");
+		
+		pdList.stream().filter(inStock).forEach(restock);
+		}
 		
 	}
 
