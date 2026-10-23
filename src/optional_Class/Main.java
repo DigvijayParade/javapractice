@@ -4,21 +4,40 @@ import java.util.Optional;
 
 public class Main{
 	
-	public static void main(String[] args) {
+	public static void printCity(User u) {
 		
-		Address a1 = new Address("barshi");
+		String city = Optional.ofNullable(u)
+						.map(User::getAddress)
+						.map(Address::getCity)
+						.map(String::toUpperCase)
+						.orElse("Invalid Input");
 		
-		User u1 = new User(a1);
-		
-		printUserCity(u1);
+		System.out.println(city);
 	}
 	
-	public static void printUserCity(User user) {
+	public static void printPenName(Book b) {
 		
-		String city = Optional.ofNullable(user).
-				map(User::getAddress).map(Address::getCity).map(String::toUpperCase)
-				.orElse("Unknown City");
-				
-		System.out.println(city);
+		String penname = Optional.ofNullable(b)
+						.map(Book::getAuthor)
+						.map(Author::getPenName)
+						.map(String::toUpperCase)
+						.orElse("Invalid Input");
+		
+		System.out.println(penname);
+	}
+	
+	public static void main(String[] args) {
+		
+		Author a = new Author();
+		
+		Book b = new Book(a);
+		printPenName(b);
+		
+		System.out.println("//////////////////////");
+		
+		Address  ad= new Address();
+		User u = new User(ad);
+		
+		printCity(u);
 	}
 }
