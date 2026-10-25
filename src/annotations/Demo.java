@@ -11,4 +11,6 @@ public interface Demo {
 		
 		System.out.println("Interface Static method");
 	}
+	
+	
 }
