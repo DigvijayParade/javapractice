@@ -1,5 +1,7 @@
 package optional_Class;
 
+import java.util.Optional;
+
 public class Demo {
 
 	public static void main(String[] args) {
@@ -10,8 +12,15 @@ public class Demo {
 		Book b1 = new Book(a1);
 		Book b2 = new Book(a2);
 		
-		System.out.println(a1.getPenName());
-		System.out.println(a2.getPenName());
+	}
+	public static void getPenname(Book b) {
 		
+		String penName = Optional.ofNullable(b)
+						.map(Book::getAuthor)
+						.map(Author::getPenName)
+						.map(String::toUpperCase)
+						.orElse("Invalid Input!!")
+						
+		System.out.println(penName);
 	}
 }
