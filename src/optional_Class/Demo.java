@@ -19,7 +19,7 @@ public class Demo {
 						.map(Book::getAuthor)
 						.map(Author::getPenName)
 						.map(String::toUpperCase)
-						.orElse("Invalid Input!!")
+						.orElse("Invalid Input!!");
 						
 		System.out.println(penName);
 	}
