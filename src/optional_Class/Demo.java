@@ -14,7 +14,7 @@ public class Demo {
 		
 	}
 	public static void getPenname(Book b) {
-		
+		//did something
 		String penName = Optional.ofNullable(b)
 						.map(Book::getAuthor)
 						.map(Author::getPenName)
