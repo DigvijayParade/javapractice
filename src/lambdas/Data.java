@@ -40,6 +40,7 @@ public class Data {
 	@Override
 	public int hashCode() {
 		
+		
 		return Objects.hash(name,id,salary);
 	}
 	
