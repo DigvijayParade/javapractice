@@ -16,8 +16,8 @@ public class Mains {
 			);
 		
 		List<String> empName = employees.stream()
+								.filter(e -> e.getSalary() > 50000.00)
 								.map(Employeess::getName)
-//								.filter(e -> e > 50000.00)
 								.toList();
 		
 		System.out.println(empName);
