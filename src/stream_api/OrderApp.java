@@ -1,12 +1,12 @@
-package stream_api;
+package stream_api ;
 
 import java.util.List;
 
-public class OrderApp {
-
+public class OrderApp{
+	
 	public static void main(String[] args) {
 		
-		List<Orders> od = List.of(
+		List<Orders> pdList = List.of(
 				
 				new Orders(101, "alice smith", 250.50, "DELIVERED"),
 			    new Orders(102, "bob jones", 80.00, "DELIVERED"),      
@@ -16,13 +16,12 @@ public class OrderApp {
 				
 			);
 		
-		List<String> some = od.stream()
+		List<String> del = pdList.stream()
 							.filter(o -> o.getStatus().equalsIgnoreCase("DELIVERED"))
-							.filter(o -> o.getAmount() > 100.00)
-							.map(O -> O.getCustomerName())
-							.map(String::toUpperCase)
+							.filter(o -> o.getAmount() > 500.00)
+							.map(Orders::getCustomerName)
 							.toList();
-							
-		System.out.println(some);
+		
+		System.out.println(del);
 	}
 }
