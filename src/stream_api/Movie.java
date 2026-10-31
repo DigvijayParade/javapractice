@@ -22,6 +22,16 @@ public class Movie {
 				+ releaseYear + ", isStreaming=" + isStreaming + "]";
 	}
 
+	public Movie(int id, String title, String genre, double rating, int releaseYear, boolean isStreaming) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.genre = genre;
+		this.rating = rating;
+		this.releaseYear = releaseYear;
+		this.isStreaming = isStreaming;
+	}
+
 	public int getId() {
 		return id;
 	}
