@@ -18,29 +18,19 @@ public class EmpOpr {
 	            new Employees("Jane Smith", 34, "Female", 72000.00) 
 	        ));
 		
-//		List<String> femaleEmp = empList.stream()
-//								.filter(e -> e.getGender().equalsIgnoreCase("Female"))
-//								.map(e -> e.getName())
-//								.toList();
-//		
-//		System.out.println("Female Employees ....");
-//		
-//		for (String f : femaleEmp) {
-//			
-//			System.out.println(f);
-//		}
+		long richCount = empList.stream()
+						.filter(e -> e.getSalary() > 60000.00)
+						.distinct()
+						.count();
 		
-		int femalecount = 0 ;
+		System.out.println(richCount);
 		
-		for (Employees e : empList) {
-			
-			if(e.getGender().equalsIgnoreCase("Female")) {
-				
-				femalecount ++;
-			}
-			
-		}
-		System.out.println(femalecount);
+		long females = empList.stream()
+				.filter(e -> e.getGender().equalsIgnoreCase("Female"))
+				.distinct()
+				.count();
+		
+		System.out.println(females);
 	}
 	
 }
