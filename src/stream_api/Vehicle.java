@@ -1,132 +1,43 @@
-package stream_api;
+package stream_api ;
 
+import java.util.List;
 import java.util.Objects;
 
-class TwoWheeler{
-	
-	private String name ;
-	private int id ;
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public TwoWheeler(String name, int id) {
-		super();
-		this.name = name;
-		this.id = id;
-	}
-	@Override
-	public int hashCode() {
-		return Objects.hash(id, name);
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		TwoWheeler other = (TwoWheeler) obj;
-		return id == other.id && Objects.equals(name, other.name);
-	}
-	@Override
-	public String toString() {
-		return "TwoWheeler [name=" + name + ", id=" + id + "]";
-	}
-}
-
-class FourWheeler{
+public class Vehicle{
 	
 	private int id ;
 	private String name ;
-	@Override
-	public String toString() {
-		return "FourWheeler [id=" + id + ", name=" + name + "]";
-	}
-	@Override
-	public int hashCode() {
-		return Objects.hash(id, name);
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		FourWheeler other = (FourWheeler) obj;
-		return id == other.id && Objects.equals(name, other.name);
-	}
-	public FourWheeler(int id, String name) {
-		super();
-		this.id = id;
-		this.name = name;
-	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-}
-
-
-public class Vehicle {
-
-	private String ve_Name ;
-	private int ve_id ;
-	private TwoWheeler tw ;
-	private FourWheeler fw ;
+	private String brand ;
+	private VehicleType type ;
 	private double price ;
 	private String color ;
+	private List<String> features ;
 	
 	public Vehicle() {}
-
-	public Vehicle(String ve_Name, int ve_id, TwoWheeler tw, FourWheeler fw, double price, String color) {
+	
+	public Vehicle(int id, String name, String brand, VehicleType type, double price, String color,
+			List<String> features) {
 		super();
-		this.ve_Name = ve_Name;
-		this.ve_id = ve_id;
-		this.tw = tw;
+		this.id = id;
+		this.name = name;
+		this.brand = brand;
+		this.type = type;
 		this.price = price;
 		this.color = color;
+		this.features = features;
 	}
-
-	public Vehicle(String ve_Name, int ve_id, FourWheeler fw, double price, String color) {
-		super();
-		this.ve_Name = ve_Name;
-		this.ve_id = ve_id;
-		this.fw = fw;
-		this.price = price;
-		this.color = color;
-	}
-
+	
 	@Override
 	public String toString() {
-		return "Vehicle [ve_Name=" + ve_Name + ", ve_id=" + ve_id + ", tw=" + tw + ", fw=" + fw + ", price=" + price
-				+ ", color=" + color + "]";
+		return "Vehicle [id=" + id + ", name=" + name + ", brand=" + brand + ", type=" + type + ", price=" + price
+				+ ", color=" + color + ", features=" + features + "]";
 	}
-
+	
 	@Override
 	public int hashCode() {
-		return Objects.hash(color, fw, price, tw, ve_Name, ve_id);
+		return Objects.hash(brand, color, features, id, name, price, type);
 	}
-
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -136,8 +47,55 @@ public class Vehicle {
 		if (getClass() != obj.getClass())
 			return false;
 		Vehicle other = (Vehicle) obj;
-		return Objects.equals(color, other.color) && Objects.equals(fw, other.fw)
-				&& Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price)
-				&& Objects.equals(tw, other.tw) && Objects.equals(ve_Name, other.ve_Name) && ve_id == other.ve_id;
+		return Objects.equals(brand, other.brand) && Objects.equals(color, other.color)
+				&& Objects.equals(features, other.features) && id == other.id && Objects.equals(name, other.name)
+				&& Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price) && type == other.type;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public VehicleType getType() {
+		return type;
+	}
+	public void setType(VehicleType type) {
+		this.type = type;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public List<String> getFeatures() {
+		return features;
+	}
+	public void setFeatures(List<String> features) {
+		this.features = features;
 	}
 }
