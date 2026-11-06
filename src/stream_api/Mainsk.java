@@ -1,35 +1,47 @@
-package stream_api;
+package stream_api ;
 
-import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
+import java.util.OptionalDouble;
 
-public class Mainsk {
-
+public class Mainsk{
+	
 	public static void main(String[] args) {
 		
-		Vehicle v1 = new Vehicle(1, "Ninja 400", "Kawasaki", VehicleType.TWO_WHEELER, 5500.00, "Green", List.of("ABS", "Slipper Clutch"));
-        Vehicle v2 = new Vehicle(2, "CBR500R", "Honda", VehicleType.TWO_WHEELER, 7000.00, "Red", List.of("ABS", "LED Lights"));
-        Vehicle v3 = new Vehicle(3, "Civic", "Honda", VehicleType.FOUR_WHEELER, 24000.00, "Blue", List.of("Sunroof", "Lane Assist", "Apple CarPlay"));
-        Vehicle v4 = new Vehicle(4, "Mustang GT", "Ford", VehicleType.FOUR_WHEELER, 45000.00, "Black", List.of("V8 Engine", "Leather Seats", "Track Mode"));
-        Vehicle v5 = new Vehicle(5, "Model 3", "Tesla", VehicleType.FOUR_WHEELER, 39000.00, "White", List.of("Autopilot", "Sunroof", "Heated Seats"));
-        Vehicle v6 = new Vehicle(6, "Activa 6G", "Honda", VehicleType.TWO_WHEELER, 1200.00, "Grey", List.of("CBS", "Silent Start"));
+		Product p1 = new Product(1, "Laptop", Category.ELECTRONICS, 1200.00);
+		Product p2 = new Product(2, "Headphones", Category.ELECTRONICS, 150.00);
+		Product p3 = new Product(3, "Jeans", Category.FASHION, 45.00);
+		Product p4 = new Product(4, "T-Shirt", Category.FASHION, 25.00);
+		Product p5 = new Product(5, "Clean Code Book", Category.BOOKS, 40.00);
+		Product p6 = new Product(6, "Smartwatch", Category.ELECTRONICS, 250.00);
 
-        
-        DealerShip d1 = new DealerShip(101, "Apex Motors", "New York", List.of(v1, v3, v4));
-        DealerShip d2 = new DealerShip(102, "Urban Wheels", "Los Angeles", List.of(v2, v5));
-        DealerShip d3 = new DealerShip(103, "Metro Auto", "New York", List.of(v6));
-        DealerShip d4 = new DealerShip(104, "Empty Motors", "Chicago", null);
+		Order o1 = new Order(101, "Alice", List.of(p1, p3));
+		Order o2 = new Order(102, "Bob", List.of(p2, p4, p5));
+		Order o3 = new Order(103, "Charlie", List.of(p6));
+		Order o4 = new Order(104, "David", null);      // Edge case: null products
+		Order o5 = new Order(105, "Eve", List.of());    // Edge case: empty list
 
-        List<DealerShip> dealerships = new ArrayList<>(List.of(d1, d2, d3, d4));
-        
-        List<String> uniqueFeatures = dealerships.stream()
-        								.filter(d -> d != null && d.getVehicles() != null)
-        								.flatMap(d -> d.getVehicles().stream())
-        								.filter(v -> v.getType() == VehicleType.FOUR_WHEELER && v.getPrice() > 20000.00)
-        								.flatMap(v -> v.getFeatures().stream())
-        								.distinct()
-        								.toList();
-        
-        System.out.println(uniqueFeatures);
+		List<Order> orders = List.of(o1, o2, o3, o4, o5);
+		
+		double avgEle = orders.stream()
+									.filter(o -> o != null && o.getProducts() != null)
+									.flatMap(o -> o.getProducts().stream())
+									.filter(p -> p.getCa() ==  Category.ELECTRONICS)
+									.mapToDouble(p -> p.getPrice())
+									.average()
+									.orElse(0.0);
+		
+		System.out.println(avgEle);
+							
+		Product maxPrice =	orders.stream()
+			.filter(o -> o != null && o.getProducts() != null)
+			.flatMap(o -> o.getProducts().stream())
+			.max(Comparator.comparing(Product::getPrice))
+			.get();
+		
+		System.out.println(maxPrice);
+						
+						
 	}
 }
