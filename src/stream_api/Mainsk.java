@@ -46,8 +46,15 @@ public class Mainsk{
 		.filter(o -> o != null && o.getProducts() != null)
 		.flatMap(o -> o.getProducts().stream())
 		.collect(Collectors.groupingBy(p -> ((Product) p).getCa()));
-		
+		 
 						
-					System.out.println(some);	
+					System.out.println(some);
+					
+					
+				Map<Integer ,String> someL =	orders.stream()
+					.filter(o -> o != null && o.getProducts() != null)
+					.collect(Collectors.toMap(o -> o.getOrderId(), o -> o.getCustomerName()));
+				
+				System.out.println(someL);
 	}
 }
