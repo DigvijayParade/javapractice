@@ -2,8 +2,8 @@ package stream_api ;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
-import java.util.OptionalDouble;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Mainsk{
 	
@@ -41,7 +41,13 @@ public class Mainsk{
 			.get();
 		
 		System.out.println(maxPrice);
+		
+	Map <Category ,List<Product>> some =	orders.stream()
+		.filter(o -> o != null && o.getProducts() != null)
+		.flatMap(o -> o.getProducts().stream())
+		.collect(Collectors.groupingBy(p -> ((Product) p).getCa()));
+		
 						
-						
+					System.out.println(some);	
 	}
 }
