@@ -12,7 +12,9 @@ public class MapDemo {
 		
 		System.out.println(stdInfo.size());
 		stdInfo.put(1,new ArrayList<>());
-		stdInfo.get(1).addAll(List.of("nanu","sonu"));
+		stdInfo.get(1).addAll(List.of("nanu","sonu"
+				
+				));
 		
 		stdInfo.put(2, new ArrayList<>(List.of("Abe bolna ","Kya hui hawa nikal gai")));
 		
