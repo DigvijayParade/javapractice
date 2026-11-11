@@ -9,6 +9,6 @@ public class LambdaDeno {
 	LambdaDemo obj = (int a,int b) -> {return a * b ;};
 	
 	
-	obj.m1(2, 10);
+	System.out.println(obj.m1(2, 10));
 	}
 }
