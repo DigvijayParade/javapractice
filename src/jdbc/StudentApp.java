@@ -13,6 +13,8 @@ public class StudentApp{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		while(true) {
 			
+			
+			
 			System.out.println("1 to add");
 			System.out.println("2 to delete");
 			System.out.println("3 to display");
