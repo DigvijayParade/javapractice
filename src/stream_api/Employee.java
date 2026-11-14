@@ -1,80 +1,33 @@
 package stream_api;
 
-import java.util.Objects;
+import java.util.List;
 
 public class Employee {
+    private int id;
+    private String name;
+    private String department;
+    private double salary;
+    private int experienceYears;
+    private List<String> skills;
 
-	private String empName ;
-	private int empId ;
-	private int empAge ;
-	private double empSalary ;
-	
-	public Employee () {}
-	
-	public Employee (String empName,int empId,int empAge,double empSalary) {
-	
-		    this.empName = empName;
-		    this.empId = empId;
-		    this.empAge = empAge;
-		    this.empSalary = empSalary; 
-		
-	}
-	
-	public void setName (String name ) {
-		
-		this.empName = name ;
-		
-	}
-	public String getName() {
-		
-		return this.empName ;
-	}
+    public Employee(int id, String name, String department, double salary, int experienceYears, List<String> skills) {
+        this.id = id;
+        this.name = name;
+        this.department = department;
+        this.salary = salary;
+        this.experienceYears = experienceYears;
+        this.skills = skills;
+    }
 
-	@Override
-	public String toString() {
-		return "Employee [empName=" + empName + ", empId=" + empId + ", empAge=" + empAge + ", empSalary=" + empSalary
-				+ "]";
-	}
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public String getDepartment() { return department; }
+    public double getSalary() { return salary; }
+    public int getExperienceYears() { return experienceYears; }
+    public List<String> getSkills() { return skills; }
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(empAge, empId, empName, empSalary);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Employee other = (Employee) obj;
-		return empAge == other.empAge && empId == other.empId && Objects.equals(empName, other.empName)
-				&& Double.doubleToLongBits(empSalary) == Double.doubleToLongBits(other.empSalary);
-	}
-
-	public int getEmpId() {
-		return empId;
-	}
-
-	public void setEmpId(int empId) {
-		this.empId = empId;
-	}
-
-	public int getEmpAge() {
-		return empAge;
-	}
-
-	public void setEmpAge(int empAge) {
-		this.empAge = empAge;
-	}
-
-	public double getEmpSalary() {
-		return empSalary;
-	}
-
-	public void setEmpSalary(double empSalary) {
-		this.empSalary = empSalary;
-	}
+    @Override
+    public String toString() {
+        return name + " (" + department + ", ₹" + salary + ", " + experienceYears + "y)";
+    }
 }
