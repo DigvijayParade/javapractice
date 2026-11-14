@@ -1,7 +1,12 @@
 package collection_framworks;
 
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class OrderAnalyze {
 	
@@ -16,9 +21,59 @@ public class OrderAnalyze {
 		Order o7 = new Order(506, "Aarav", "Clothing", 1200.0);
 		
 		
-		Set<Order> od = new HashSet<>(Set.of(o1,o2,o3,o4,o5,o6,o7));
+		ArrayList<Order> odList = new ArrayList<>();
 		
-		od.forEach(System.out::println);
+		odList.add(o1);
+		odList.add(o2);
+		odList.add(o3);
+		odList.add(o4);
+		odList.add(o5);
+		odList.add(o6);
+		odList.add(o7);
+		
+		System.out.println(odList);
+		System.out.println(odList.get(2));
+		
+		Set<Order> uniqueOrders = new LinkedHashSet<>(odList);
+		
+		uniqueOrders.forEach(System.out::println);
+		
+		System.out.println(uniqueOrders.size());
+		
+		Map<Integer, Order> orderLookup = new HashMap<>();
+		
+		orderLookup.put(o1.orderId, o1);
+		orderLookup.put(o2.orderId, o2);
+		orderLookup.put(o3.orderId, o3);
+		orderLookup.put(o4.orderId, o4);
+		orderLookup.put(o5.orderId, o5);
+		orderLookup.put(o6.orderId, o6);
+		orderLookup.put(o7.orderId, o7);
+		
+		System.out.println(orderLookup);
+		
+		System.out.println(orderLookup.get(504));
+		orderLookup.containsKey(999);
+		
+		List<Order> books =odList.stream()
+				.filter(o -> o != null )
+				.filter(o -> o.getCategory().equalsIgnoreCase("Books"))
+				.toList();
+		
+		System.out.println(books);
+		
+		
+		Map<Object, List<Order>> cat =odList.stream()
+				.filter(o -> o != null)
+				.collect(Collectors.groupingBy(o -> o.getCategory()));
+		
+		
+		System.out.println("////////////////////");
+		System.out.println(cat);
+		
+		
+				
+				
 	}
 
 }
