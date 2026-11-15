@@ -11,17 +11,18 @@ public class RevNUm {
 		
 	}
 	public static void reverse(int num) {
-	
+		
 		int og = num ;
 		int rev = 0 ;
 		
-		while (num != 0) {
-			
+		while(num != 0) {
 			int lastDG = num % 10 ;
 			rev = (10 * rev) + lastDG ;
 			num = num / 10 ;
+			
 		}
-		
-		System.out.println(rev);
 	}
+		
+		
+	
 }
