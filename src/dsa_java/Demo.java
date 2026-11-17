@@ -15,16 +15,17 @@ public class Demo{
 			System.out.println("Invalid Input !!");
 			return ;
 		}
+		
 		for(int i = 2 ; i <= Math.sqrt(num); i++) {
 			
 			if(num % i == 0) {
 				
-				System.out.println(num +" is a Composite Number !!");
+				System.out.println(num + " is aComposite Number !!");
 				return ;
 			}
 		}
 		
-		System.out.println(num+ " is a Prime Number !!");
+		System.out.println(num+" is a Preim Number !!");
 		
 	}
 }
