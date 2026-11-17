@@ -16,8 +16,9 @@ public class RevNUm {
 		int rev = 0 ;
 		
 		while(num != 0) {
+			
 			int lastDG = num % 10 ;
-			rev = (10 * rev) + lastDG ;
+			rev = (rev * 10) + lastDG ;
 			num = num / 10 ;
 			
 		}
