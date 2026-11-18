@@ -53,7 +53,10 @@ public class StreamEngine {
        
        System.out.println("5th////////////////////////////");
        
-      
+       Map<String,Double> AvgDep =  employees.stream()
+									.filter(e -> e != null && e.getSkills() != null)
+									.collect(Collectors.groupingBy(Employee::getDepartment))
+									.av
     		   					
     		   					
     		   								
