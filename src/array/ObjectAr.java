@@ -12,6 +12,8 @@ public class ObjectAr {
 	public ObjectAr(String stdname, String depName, int yearofstud, double cgpa) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Name: ");
+		
+		
 		this.stdname = sc.nextLine();
 		System.out.println("Enter Dep Name: ");
 		this.depName = sc.nextLine();
