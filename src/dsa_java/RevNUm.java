@@ -6,7 +6,8 @@ public class RevNUm {
 
 	public static void main(String[] args) {
 		
-		reverse(123);
+		
+		reverse(1234567889);
 		
 		
 	}
@@ -20,12 +21,14 @@ public class RevNUm {
 			int lastDG = num % 10 ;
 			rev = (rev * 10) + lastDG ;
 			num = num / 10 ;
-			
 		}
 		
 		System.out.println(rev);
-	}
+	
 		
 		
 	
-}
+		
+		
+	
+}}
