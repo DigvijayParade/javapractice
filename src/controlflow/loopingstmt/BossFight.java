@@ -9,6 +9,7 @@ public class BossFight {
 		
 	}
 	
+	
 	public static void fight(int bossHealth, String hit) {
 		
 		while(bossHealth > 0) {
