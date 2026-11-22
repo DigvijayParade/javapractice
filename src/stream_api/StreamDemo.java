@@ -49,7 +49,7 @@ public class StreamDemo {
 			System.out.println("Enter Salary : ");
 			double empSalary = Double.parseDouble(sc.nextLine());
 			
-			empInfo.add(new Employee(empName,empId,empAge,empSalary));
+			
 		}
 
 		return empInfo ;
