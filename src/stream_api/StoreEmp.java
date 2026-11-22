@@ -33,7 +33,7 @@ public class StoreEmp {
 			System.out.println("Enter Salary : ");
 			double empSalary = Double.parseDouble(sc.nextLine());
 			
-			empInfo.add(new Employee(empName,empId,empAge,empSalary));
+			
 			
 		}
 		
