@@ -4,7 +4,7 @@ public class Demo{
 	
 	public static void main(String[] args) {
 		
-		primeOrComp(11);
+		primeOrComp(37);
 		
 	}
 	
@@ -12,20 +12,19 @@ public class Demo{
 		
 		if(num <= 1) {
 			
-			System.out.println("Invalid Input !!");
+			System.out.println("Invalid input !!");
 			return ;
 		}
 		
-		for(int i = 2 ; i <= Math.sqrt(num); i++) {
+		for(int i = 2 ; i <= Math.sqrt(num);i++) {
 			
 			if(num % i == 0) {
 				
-				System.out.println(num + " is aComposite Number !!");
+				System.out.println(num+" is a Composite Number");
 				return ;
 			}
 		}
 		
-		System.out.println(num+" is a Preim Number !!");
-		
-	}
+		System.out.println(num+" is a Prime Number !!");
+		}
 }
