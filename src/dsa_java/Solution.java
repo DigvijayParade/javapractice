@@ -13,6 +13,7 @@ public class Solution {
             nums[i] = nums[i] + nums[i-1];
         }
         
+        
         System.out.println(Arrays.toString(nums));
     }
         
