@@ -23,6 +23,7 @@ public class RevNUm {
 			num = num / 10 ;
 		}
 		
+		
 		System.out.println(rev);
 	
 		
